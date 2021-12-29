@@ -72,8 +72,8 @@ server {
     }
 }
 EOF
-ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
 unlink /etc/nginx/sites-available/default
+ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
 nginx -t
 systemctl reload nginx
 
