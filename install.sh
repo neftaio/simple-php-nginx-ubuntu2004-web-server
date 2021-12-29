@@ -24,9 +24,9 @@ if [ "$os" != "$os_enabled" ]; then
     echo -e "OS $os not compatible with this script. Only for $os_enabled"
     exit 1
 fi
-os_version_enabled="20.04"
+os_version_enabled="\"20.04\""
 os_version=`cat /etc/os-release | awk -F '=' '{if ($1 == "VERSION_ID") print $2}'`
-if [ $os_version != "$os_version_enabled" ]; then
+if [ "$os_version" != "$os_version_enabled" ]; then
     echo -e "OS version $os_version not valid to run this script, only enabled for $os_version_enabled"
     exit 1
 fi
