@@ -33,7 +33,7 @@ fi
 
 echo -e "-->Updating the system"
 apt update -y
-apt upgrate -y
+apt upgrade -y
 
 echo -e "-->Installing Nginx"
 apt install nginx -y
